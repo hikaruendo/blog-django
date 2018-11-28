@@ -1,0 +1,21 @@
+<html>
+    <table border="5">
+        <thead>
+            <tr>
+                <th>item</th>
+                <th>name</th>
+                <th>stock</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for context in querysetsss %}
+                <tr>
+                    <td>{{ context.item }}</td>
+                    <td>{{ context.name }}</td>
+                    <td>{{ context.stock }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</html>

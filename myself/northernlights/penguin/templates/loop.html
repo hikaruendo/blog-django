@@ -1,0 +1,44 @@
+{% load static %}
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% block extrahead %}
+        <link href="{% static 'test3.css' %}" rel="stylesheet">
+        {% endblock %}
+
+        <div class='a1'>
+            <h1>test page</h1>
+        </div>
+        
+        <div class='b1'>
+            <p><b>alphabet:</b><br>
+            {% for p in alp %}
+            {{ p }}
+            {% endfor %}
+            </p>
+        </div>
+    
+        <div class='d1'>
+            <p>
+                <b>fruits:</b><br>
+                {% for p in fruits %}
+                {{ p }} etc..<br>
+                {% endfor %}
+            </p>
+        </div>
+
+        <div class='e1'>
+            <p>
+                <b>natural number under 30:</b><br>
+                {% for p in natural %}
+                    {% if p <= 30 %}
+                        {{ p }}
+                    {% endif %}
+                {% endfor %}
+            </p>
+        </div>
+        
+    </body>
+</html>
